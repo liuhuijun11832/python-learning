@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 class MyNumbers:
     def __iter__(self):
         self.a = 1
@@ -92,4 +93,13 @@ def fun2():
         print(num1)
     inner()
     print(num1)
+
+
 fun2()
+
+
+# 别人引入该模块时，可以通过__name__属性来判断时别人在运行这个主程序还是自己在运行
+if __name__ == '__main__':
+    print("这是程序自身在执行")
+else:
+    print("其他模块在执行")

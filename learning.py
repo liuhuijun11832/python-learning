@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 import keyword
 import sys
-import MyNumbers
 
 print("hello world")
 print("hello ", end="")
@@ -87,7 +86,7 @@ print(listInt)
 
 # tuple元组,可以包含不同类型的数据类型
 listIns = ['abcd', 33, 2.23, "hello world"]
-# list使用方括号，元组使用括号，不然括号会当作运算符使用
+# list使用方括号，元组使用括号，,只有一个元素的时候需要加逗号，不然括号会当作运算符使用
 tup1 = (50,)
 for x in listIns:
     print(x, end=" ")

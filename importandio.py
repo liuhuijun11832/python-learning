@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # 导入一个模块的某个方法，import *代表所有方法（但是_开头的名字不在此列），同时被导入模块中的可执行代码在第一次也会执行
-from MyNumbers import printme
+from mynumbers import printme
 import math
 import pickle
 import pprint
@@ -21,7 +21,7 @@ print('常量PI的值近似为{0:.3f}'.format(math.pi))
 
 
 str = input("请输入：")
-print("你输入的内容是：",str)
+print("你输入的内容是：", str)
 
 
 """打开文件的模式：
@@ -75,3 +75,4 @@ pprint.pprint(data2)
 data3 = pickle.load(pkl_file)
 pprint.pprint(data3)
 pkl_file.close()
+

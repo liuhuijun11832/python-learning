@@ -38,13 +38,17 @@ class LoginTest(unittest.TestCase):
             tmp_str = s.split("=")
             logging.info(tmp_str)
             self.config_dict[tmp_str[0]] = tmp_str[1].replace('\n', '')
-        self.redis = redis.Redis(host=self.config_dict['redis.host'],
-                            password=self.config_dict['redis.password'],
-                            port=self.config_dict['redis.port'])
-        self.jdbc = mysql.connector.connect(host=self.config_dict['jdbc.host'],
-                                       user=self.config_dict['jdbc.username'],
-                                       password=self.config_dict['jdbc.password'],
-                                       database=self.config_dict['jdbc.database'])
+        self.redis = redis.Redis(
+            host=self.config_dict['redis.host'],
+            password=self.config_dict['redis.password'],
+            port=self.config_dict['redis.port']
+        )
+        self.jdbc = mysql.connector.connect(
+            host=self.config_dict['jdbc.host'],
+            user=self.config_dict['jdbc.username'],
+            password=self.config_dict['jdbc.password'],
+            database=self.config_dict['jdbc.database']
+        )
         # if self.config_dict['chrome.drive.path'].strip() != '':
         #     logging.info('>>>>>>>>>>chrome驱动路径为 {}'.format(self.config_dict['chrome.drive.path'].strip()))
         #     self.browers = webdriver.Chrome(self.config_dict['chrome.drive.path'])

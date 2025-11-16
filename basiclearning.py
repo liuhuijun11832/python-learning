@@ -1,12 +1,11 @@
 # -*- coding: utf-8 -*-
 import keyword
 import sys
-
+print("===================字符串类型=================")
 print("hello world")
 print("hello ", end="")
 print("world")
 print(keyword.kwlist)
-
 # !/usr/bin/python3
 
 # 第一个注释
@@ -19,9 +18,11 @@ print(keyword.kwlist)
 
 """
 第五注释
+第五注释
 第六注释
 """
 # 基本类型
+print("======================基本类型================")
 a = b = c = 1
 a, b, c = 1, 2, "hello world"
 # 不可变：Number，String，Tuple
@@ -32,10 +33,18 @@ a = 20
 b = 5.5
 c = True
 d = 4+3j
+e = "123"
 print(isinstance(a, int))
 print(type(a) == int)
+print("======================强制类型转换===================")
+f=int(e)
+print(type(f) == int)
 
-
+print("=========================简单计算器================")
+num1 = input("请输入一个数字")
+num2 = input("请输入一个数字")
+eval_sum=eval(f"int({num1})+int({num2})")
+print("%s + %s = %s" % (num1, num2, eval_sum))
 class A:
     pass
 
@@ -113,6 +122,7 @@ print(a | b)
 print(a & b)
 print(a ^ b)
 
+print("=========================字典================")
 # Dictionary 字典，通过键来取存取，使用{}来创建，它是一个无序的键(key):值(value)的集合
 # 键必须是不可变元素
 dic = {}
@@ -129,7 +139,8 @@ print("Tinydict['name']", tinyDict['name'])
 tinyDict['name'] = 'alibaba'
 print("Tinydict['name']", tinyDict['name'])
 print("name" in tinyDict)
-
+tinyDict.setdefault('name',"Java")
+print(tinyDict.get('name'))
 
 shopDict = dict([('taobao', 1), ('tianmao', 2), ('jingdong', 3)])
 print(shopDict)
@@ -167,11 +178,11 @@ print(7//2.0)
 # 计算1到100的之和
 n = 100
 count = 1
-sum = 0
+eval_sum = 0
 while count <= n:
-    sum += count
+    eval_sum += count
     count += 1
-print("从1 到 %d 的数之和为 %d" % (n, sum))
+print("从1 到 %d 的数之和为 %d" % (n, eval_sum))
 # range函数可以用来生成一个数字序列，或者指定区间内的数字序列
 for i in range(5):
     print(i)

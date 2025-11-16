@@ -14,7 +14,7 @@ try:
     s = f.readline()
     i = int(s.strip())
 except OSError as err:
-    print("OS error:{0}".format(err))
+    print(f"OS error:{err}")
 except ValueError:
     print("could not convert data to an integer.")
 # 一般情况下，不推荐这种裸露的excep

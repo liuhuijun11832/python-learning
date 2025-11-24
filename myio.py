@@ -54,3 +54,13 @@ json_str = '{"name":"Joy","age":18,"score":90}'
 def dict2student(stdin):
     return Student(stdin['name'], stdin['age'], stdin['age'])
 print(json.loads(json_str, object_hook=dict2student))
+
+# username = input("what is your name? ")
+filename = 'username.json'
+# with open(filename, 'w') as f:
+#     json.dump(username, f)
+#     print(f"remember your name is {username}")
+with open(filename) as f:
+    username = json.load(f)
+    print(f"remember you name is {username}")
+
